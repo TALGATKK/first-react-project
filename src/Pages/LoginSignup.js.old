@@ -1,0 +1,50 @@
+import React from "react";
+import "./CSS/LoginSignup.css";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+export function LoginSignup({ setIsLoggedIn, isLoggedIn }) {
+  const [username, setUsername] = useState("");
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    if (username.length) {
+      setIsLoggedIn(true);
+      console.log(isLoggedIn);
+      alert("Вы успешно авторизованы!");
+      navigate("/");
+    } else {
+      alert("Zapolnite pole username");
+    }
+  };
+  return (
+    <div className="loginsignup">
+      <div className="loginsignup-container">
+        <h1>Авторизация</h1>
+        <h1>{username}</h1>
+        <form>
+          <div className="loginsignup-inputs">
+            <input
+              type="text"
+              name="username"
+              placeholder="Логин"
+              required=""
+              onChange={(e) => {
+                setUsername(e.target.value);
+              }}
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Пароль"
+              required=""
+            />
+          </div>
+          <button type="submit" onClick={handleLogin}>
+            Продолжить
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,14 @@
+.order-items {
+  padding-top: 50px;
+  padding-left: 30px;
+}
+.order-items p {
+  color: green;
+}
+.order-items .order-table {
+  width: max-content;
+  margin: 10px;
+}
+.order-items .order-table th {
+  padding: 10px;
+}
