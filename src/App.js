@@ -8,6 +8,7 @@ import { Routes, Route } from "react-router-dom";
 import { LoginSignup } from "./Pages/LoginSignup.js";
 import { useState, useEffect } from "react";
 import AuthContextProvider from "./AuthContext";
+import AboutItem from "./Pages/AboutItem.js";
 
 export default function App() {
   const [productsList, setProductsList] = useState([]);
@@ -17,7 +18,7 @@ export default function App() {
   async function getProducts() {
     try {
       const response = await fetch(
-        "https://mocki.io/v1/174b379d-2a39-43ea-af47-6ff7a549b9f5"
+        "https://mocki.io/v1/a3bfe28e-bf2e-4f81-9243-4cffb0adc573"
       );
       const resultJson = await response.json();
       setProductsList(resultJson);
@@ -98,6 +99,15 @@ export default function App() {
             }
           />
           <Route path="/order" element={<Order order={order} />} />
+          <Route
+            path="/:id"
+            element={
+              <AboutItem
+                products={productsList}
+                handleAddProduct={handleAddProduct}
+              />
+            }
+          />
         </Routes>
         <Footer />
       </AuthContextProvider>

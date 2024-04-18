@@ -6,11 +6,12 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthContext";
 
 export function Item(props) {
-  const { product, handleAddProduct } = props;
+  const { id, product, handleAddProduct } = props;
   const { isLoggedIn } = useContext(AuthContext);
+  console.log(props.id);
   return (
     <div className="item">
-      <Link to="/">
+      <Link key={id} to={`/${id}`}>
         <img src={props.image} alt={props.title} width="400" height="300" />
       </Link>
 

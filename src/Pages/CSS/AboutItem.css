@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+}
+#grid {
+  display: grid;
+  height: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px;
+  column-gap: 20px;
+  min-height: 800px;
+}
+.third-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.third-grid ul {
+  list-style: none;
+}
+.third-grid ul li {
+  margin: 20px;
+}

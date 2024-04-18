@@ -21,6 +21,7 @@ export default function ProductList({ list, handleAddProduct, search, sort }) {
           })
           .map((product) => (
             <Item
+              id={product.id}
               key={product.id}
               image={product.image}
               title={product.title}
