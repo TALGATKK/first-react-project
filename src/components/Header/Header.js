@@ -67,21 +67,12 @@ export default function Header(props) {
               )}
             </li>
             <li>
-              {isLoggedIn ? (
-                <Link to="/cart">
-                  <Button type="primary" className="button-shop-cart">
-                    <RiShoppingCart2Fill />
-                    <p className="shop-cart-text">Корзина</p>
-                  </Button>
-                </Link>
-              ) : (
-                <Link to="/login">
-                  <Button type="primary" className="button-login">
-                    <RiShoppingCart2Fill />
-                    <p className="shop-cart-text">Корзина</p>
-                  </Button>
-                </Link>
-              )}
+              <Link to="/cart">
+                <Button type="primary" className="button-shop-cart">
+                  <RiShoppingCart2Fill />
+                  <p className="shop-cart-text">Корзина</p>
+                </Button>
+              </Link>
             </li>
             <li>
               {isLoggedIn ? (

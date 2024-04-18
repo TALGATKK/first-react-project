@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import { AuthContext } from "../AuthContext";
 import "./CSS/Cart.css";
 
 export function Cart({
@@ -8,6 +10,12 @@ export function Cart({
   handleAddOrder,
   handleClearCart,
 }) {
+  const { isLoggedIn } = useContext(AuthContext);
+  const OrderButton = () => {
+    isLoggedIn
+      ? handleAddOrder(cartItems)
+      : alert("Для заказа товара необходимо авторизоваться!");
+  };
   return (
     <div className="cart-items">
       <div className="cart-items-header">Корзина:</div>
@@ -22,7 +30,7 @@ export function Cart({
               src={item.image}
               alt={item.title}
             />
-            item
+
             <span>{item.title} </span>
             <button onClick={() => handleRemoveProduct(item)}>-</button>
             <span className="quantity"> {item.quantity} </span>
@@ -42,12 +50,8 @@ export function Cart({
         $
       </p>
       <button onClick={handleClearCart}> Очистить корзину</button>
-      <button
-        onClick={() => {
-          handleAddOrder(cartItems);
-        }}
-        className="cart-items-pay-button"
-      >
+
+      <button onClick={OrderButton} className="cart-items-pay-button">
         Заказать
       </button>
     </div>
