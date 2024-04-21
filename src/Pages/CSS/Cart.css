@@ -1,6 +1,7 @@
 .cart-items {
   padding-left: 50px;
   font-weight: 500;
+  height: 600px;
 }
 .cart-items-header {
   font-size: 120%;

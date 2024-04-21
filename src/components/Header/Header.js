@@ -12,8 +12,9 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthContext";
 
 export default function Header(props) {
-  const { setSearch } = props;
+  const { setSearch, cartItems } = props;
   const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+  console.log(cartItems);
   return (
     <header>
       <ConfigProvider
@@ -70,6 +71,9 @@ export default function Header(props) {
               <Link to="/cart">
                 <Button type="primary" className="button-shop-cart">
                   <RiShoppingCart2Fill />
+                  <span className="cart-lenght">
+                    {cartItems.length === 0 ? "0" : cartItems.length}
+                  </span>
                   <p className="shop-cart-text">Корзина</p>
                 </Button>
               </Link>

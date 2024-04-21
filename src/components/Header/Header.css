@@ -60,6 +60,14 @@ header .button-shop-cart {
   border-radius: 4px;
   font-weight: bold;
 }
+header .button-shop-cart .cart-lenght {
+  position: absolute;
+  background-color: cadetblue;
+  margin-left: 10px;
+  margin-top: -7px;
+  padding: 0px 5px 0px 5px;
+  border-radius: 5px;
+}
 header .button-login {
   margin-left: 10px;
   margin-top: 6px;
@@ -115,6 +123,7 @@ header ul.nav li {
   margin-left: 28px;
   cursor: pointer;
 }
+
 @media (max-width: 1160px) {
   header .finder-main .finder-input {
     width: 330px;

@@ -1,12 +1,23 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Button, ConfigProvider } from "antd";
+import { Button, ConfigProvider, Rate } from "antd";
 import { ShoppingCartOutlined, DollarOutlined } from "@ant-design/icons";
+import { useContext } from "react";
+import { AuthContext } from "../AuthContext";
 import "./CSS/AboutItem.css";
 
-export default function AboutItem({ products, handleAddProduct }) {
+export default function AboutItem({
+  products,
+  handleAddProduct,
+  handleAddOrderSingle,
+}) {
   const { id } = useParams();
-
+  const { isLoggedIn } = useContext(AuthContext);
+  const SingleOrder = () => {
+    isLoggedIn
+      ? handleAddOrderSingle(products[id])
+      : alert("Для заказа товара необходимо авторизоваться!");
+  };
   return (
     <div>
       <ConfigProvider
@@ -38,7 +49,10 @@ export default function AboutItem({ products, handleAddProduct }) {
           <div>
             <ul>
               <li>Описание: {products[id].description}</li>
-              <li>Рейтинг товара: {products[id].rating}</li>
+              <li>
+                Рейтинг товара:
+                <Rate value={products[id].rating} />
+              </li>
               <li>Цена: {products[id].price} $</li>
             </ul>
           </div>
@@ -57,6 +71,7 @@ export default function AboutItem({ products, handleAddProduct }) {
               </li>
               <li>
                 <Button
+                  onClick={SingleOrder}
                   type="primary"
                   shape="round"
                   icon={<DollarOutlined />}

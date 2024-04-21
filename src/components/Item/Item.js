@@ -2,12 +2,14 @@ import { TbShoppingCartPlus } from "react-icons/tb";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Item.css";
+// import { HeartOutlined } from "@ant-design/icons";
 
 export function Item(props) {
   const { id, product, handleAddProduct } = props;
-  console.log(props.id);
+
   return (
     <div className="item">
+      {/* <HeartOutlined /> */}
       <Link key={id} to={`/${id}`}>
         <img src={props.image} alt={props.title} width="400" height="300" />
       </Link>

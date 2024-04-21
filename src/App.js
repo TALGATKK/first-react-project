@@ -4,7 +4,7 @@ import Footer from "./components/Footer/Footer";
 import { Order } from "./Pages/Order";
 import { Catalog } from "./Pages/Catalog";
 import { Cart } from "./Pages/Cart";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { LoginSignup } from "./Pages/LoginSignup.js";
 import { useState, useEffect } from "react";
 import AuthContextProvider from "./AuthContext";
@@ -15,6 +15,7 @@ export default function App() {
   const [search, setSearch] = useState("");
   const [order, setOrder] = useState([]);
   const [sort, setSort] = useState("");
+  const navigate = useNavigate();
   async function getProducts() {
     try {
       const response = await fetch(
@@ -67,11 +68,16 @@ export default function App() {
     setOrder([...order, ...cartItems]);
     setCartItems([]);
   };
+  const handleAddOrderSingle = (product) => {
+    setOrder([{ ...product, quantity: 1 }]);
+    navigate("/order");
+    console.log(product);
+  };
 
   return (
     <div class="wrapper">
       <AuthContextProvider>
-        <Header setSearch={setSearch} />
+        <Header setSearch={setSearch} cartItems={cartItems} />
         <Routes>
           <Route
             path="/"
@@ -105,6 +111,7 @@ export default function App() {
               <AboutItem
                 products={productsList}
                 handleAddProduct={handleAddProduct}
+                handleAddOrderSingle={handleAddOrderSingle}
               />
             }
           />
