@@ -23,7 +23,6 @@ export default function AuthContextProvider({ children }) {
       alert("Некорректные учетные данные!!!");
     }
   };
-  console.log(user, isLoggedIn);
 
   return (
     <AuthContext.Provider value={{ ...user, isLoggedIn, setIsLoggedIn, login }}>

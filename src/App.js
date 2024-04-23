@@ -9,17 +9,19 @@ import { LoginSignup } from "./Pages/LoginSignup.js";
 import { useState, useEffect } from "react";
 import AuthContextProvider from "./AuthContext";
 import AboutItem from "./Pages/AboutItem.js";
+import Favorites from "./Pages/Favorites.js";
 
 export default function App() {
   const [productsList, setProductsList] = useState([]);
   const [search, setSearch] = useState("");
   const [order, setOrder] = useState([]);
   const [sort, setSort] = useState("");
+  const [favorites, setFavorites] = useState([]);
   const navigate = useNavigate();
   async function getProducts() {
     try {
       const response = await fetch(
-        "https://mocki.io/v1/a3bfe28e-bf2e-4f81-9243-4cffb0adc573"
+        "https://mocki.io/v1/c89fa43b-5c0f-4d63-9a1a-2b1a769c23a3"
       );
       const resultJson = await response.json();
       setProductsList(resultJson);
@@ -46,10 +48,29 @@ export default function App() {
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
   };
+
+  const handleAddFavorites = (product) => {
+    const result = productsList;
+    const obj = result.find((el) => el.id === product.id);
+    if (obj) obj.isFavorite = !obj.isFavorite;
+    setFavorites(
+      result.filter((item) => item.isFavorite === product.isFavorite)
+    );
+    return result;
+  };
+  const handleRemoveFavorites = (product) => {
+    const result = favorites.find((el) => el.id === product.id);
+    setFavorites(
+      favorites.map((item) =>
+        item.id === product.id ? (result.isFavorite = !result.isFavorite) : item
+      )
+    );
+  };
+
   const handleRemoveProduct = (product) => {
     const ProductExist = cartItems.find((item) => item.id === product.id);
     if (ProductExist.quantity === 1) {
-      setCartItems(cartItems.filter((item) => item.id !== product.id));
+      setCartItems();
     } else {
       setCartItems(
         cartItems.map((item) =>
@@ -88,6 +109,8 @@ export default function App() {
                 search={search}
                 setSort={setSort}
                 sort={sort}
+                handleAddFavorites={handleAddFavorites}
+                handleRemoveFavorites={handleRemoveFavorites}
               />
             }
           />
@@ -104,7 +127,22 @@ export default function App() {
               />
             }
           />
+
           <Route path="/order" element={<Order order={order} />} />
+          <Route
+            path="/favorites"
+            element={
+              <Favorites
+                list={favorites}
+                search={search}
+                sort={sort}
+                setFavorites={setFavorites}
+                handleAddFavorites={handleAddFavorites}
+                handleAddProduct={handleAddProduct}
+                handleRemoveFavorites={handleRemoveFavorites}
+              />
+            }
+          />
           <Route
             path="/:id"
             element={
@@ -112,6 +150,8 @@ export default function App() {
                 products={productsList}
                 handleAddProduct={handleAddProduct}
                 handleAddOrderSingle={handleAddOrderSingle}
+                handleAddFavorites={handleAddFavorites}
+                handleRemoveFavorites={handleRemoveFavorites}
               />
             }
           />

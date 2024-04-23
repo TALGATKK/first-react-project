@@ -2,7 +2,16 @@ import React from "react";
 import Container from "./Container/Container";
 import Item from "./Item/Item";
 
-export default function ProductList({ list, handleAddProduct, search, sort }) {
+export default function ProductList({
+  list,
+  handleAddProduct,
+  handleAddFavorites,
+  handleRemoveFavorites,
+  search,
+  sort,
+  setFavorites,
+  isFavorite,
+}) {
   return (
     <div className="productfilter">
       <Container>
@@ -31,6 +40,10 @@ export default function ProductList({ list, handleAddProduct, search, sort }) {
               sales={product.sold}
               product={product}
               handleAddProduct={handleAddProduct}
+              handleAddFavorites={handleAddFavorites}
+              setFavorites={setFavorites}
+              isFavorite={product.isFavorite}
+              handleRemoveFavorites={handleRemoveFavorites}
             />
           ))}
       </Container>

@@ -7,6 +7,46 @@
   position: relative;
   padding-bottom: 20px;
 }
+button,
+button:active,
+button:focus {
+  border: none;
+  transition: transform 0.2s ease;
+}
+.item .item-favorites {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.item .item-favorites-red {
+  position: absolute;
+  right: 10px;
+  color: red;
+  transition: transform 0.2s ease;
+}
+.item .item-favorites-red:hover {
+  transform: scale(1.2);
+}
+.item .item-favorites-red:active {
+  transform: scale(0.96);
+  color: red;
+}
+
+.item .item-favorites .button-favorites {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border: none;
+}
+
+.item .item-favorites .button-favorites:hover {
+  transform: scale(1.2);
+  color: red;
+}
+.item .item-favorites .button-favorites:active {
+  transform: scale(0.96);
+}
+
 .item .Active {
   position: absolute;
   border: 1px solid green;
@@ -40,6 +80,7 @@
 .item .item-star {
   color: goldenrod;
 }
+
 .item .item-rating {
   font-size: 14px;
   font-weight: 500;

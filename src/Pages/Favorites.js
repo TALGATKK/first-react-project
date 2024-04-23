@@ -1,28 +1,26 @@
 import React from "react";
-import ProductList from "../components/ProductList";
 import { CatalogFilter } from "../components/CatalogFilter/CatalogFilter";
+import ProductList from "../components/ProductList";
 
-export function Catalog({
-  productsList,
-  handleAddProduct,
-  handleAddFavorites,
+export default function Favorites({
+  setFavorites,
+  list,
   search,
   sort,
-  setFavorites,
-  isFavorite,
+  handleAddFavorites,
+  handleAddProduct,
   handleRemoveFavorites,
 }) {
   return (
     <div>
       <CatalogFilter />
       <ProductList
-        list={productsList}
-        handleAddProduct={handleAddProduct}
+        list={list}
         search={search}
         sort={sort}
         setFavorites={setFavorites}
         handleAddFavorites={handleAddFavorites}
-        isFavorite={isFavorite}
+        handleAddProduct={handleAddProduct}
         handleRemoveFavorites={handleRemoveFavorites}
       />
     </div>

@@ -7,7 +7,8 @@
     "image":"https://ae04.alicdn.com/kf/S794a3fb563e3444a84e3b8d6e638712e4.jpg_640x640.jpg",
     "rating":4.5,
     "sold":139,
-    "category":"mobile phones"
+    "category":"mobile phones",
+    "isFavorite":false
   },
   {
     "id":1,
@@ -17,7 +18,8 @@
     "image":"https://ae04.alicdn.com/kf/Sae807cc419254a8887b0af7255ff318aW.jpg_640x640.jpg",
     "rating":3.2,
     "sold":25,
-    "category":"mobile phones"
+    "category":"mobile phones",
+    "isFavorite":false
   },
   {
     "id":2,
@@ -27,7 +29,8 @@
     "image":"https://ae04.alicdn.com/kf/S8828eddf708d4614a9ac066af4d00ba3D.jpg_640x640.jpg",
     "rating":3.9,
     "sold":72,
-    "category":"mobile phones"
+    "category":"mobile phones",
+    "isFavorite":false
   },
   {
     "id":3,
@@ -37,7 +40,8 @@
     "image":"https://ae04.alicdn.com/kf/Sc1561daa7f49443d81dc69a8664043b27.png_640x640.jpg",
     "rating":4.4,
     "sold":422,
-    "category":"mobile phones"
+    "category":"mobile phones",
+    "isFavorite":false
   },
   {
     "id":4,
@@ -47,7 +51,8 @@
     "image":"https://ae04.alicdn.com/kf/S7df5b8606d044a75a3d91ddff6c449f7a.png_640x640.jpg",
     "rating":4.6,
     "sold":321,
-    "category":"mobile phones"
+    "category":"mobile phones",
+    "isFavorite":false
   },
   {
     "id":5,
@@ -57,7 +62,8 @@
     "image":"https://ae04.alicdn.com/kf/Acdd949b368614f6ebc38ac03d681fa9d7.jpg_640x640.jpg",
     "rating":3.6,
     "sold":99,
-    "category":"mobile phones"
+    "category":"mobile phones",
+    "isFavorite":false
   },
   {
     "id":6,
@@ -67,7 +73,8 @@
     "image":"https://ae04.alicdn.com/kf/Sb6faf61ad2934dd589bd24169b58194cm.jpg_640x640.jpg",
     "rating":3.5,
     "sold":41,
-    "category":"mobile phones"
+    "category":"mobile phones",
+    "isFavorite":false
   },
   {
     "id":7,
@@ -77,7 +84,8 @@
     "image":"https://ae04.alicdn.com/kf/S7df5b8606d044a75a3d91ddff6c449f7a.png_640x640.jpg",
     "rating":3.1,
     "sold":36,
-    "category":"mobile phones"
+    "category":"mobile phones",
+    "isFavorite":false
   },
   {
     "id":8,
@@ -87,7 +95,8 @@
     "image":"https://ae04.alicdn.com/kf/S5bf4cc37b63240a5be730d18ee3154f0G.jpg_640x640.jpg",
     "rating":3,
     "sold":66,
-    "category":"mobile phones"
+    "category":"mobile phones",
+    "isFavorite":false
   },
   {
     "id":9,
@@ -97,7 +106,8 @@
     "image":"https://ae04.alicdn.com/kf/S08106b2f72a246088939eb5aa3b78be7Z.jpg",
     "rating":2.9,
     "sold":78,
-    "category":"mobile phones"
+    "category":"mobile phones",
+    "isFavorite":false
   },
   {
     "id":10,
@@ -107,7 +117,8 @@
     "image":"https://ae04.alicdn.com/kf/H1faa867441624ce5ae59aa1f549b9094z.jpg_640x640.jpg",
     "rating":4.7,
     "sold":83,
-    "category":"men's clothing"
+    "category":"men's clothing",
+    "isFavorite":false
   },
   {
     "id":11,
@@ -117,7 +128,8 @@
     "image":"https://ae04.alicdn.com/kf/S21047aac0de54bfa829ac48564cfcfd4n.jpg_640x640.jpg",
     "rating":4.9,
     "sold":2750,
-    "category":"men's clothing"
+    "category":"men's clothing",
+    "isFavorite":false
   },
   {
     "id":12,
@@ -127,7 +139,8 @@
     "image":"https://ae04.alicdn.com/kf/S38cd61c4d47b474c8b9d96c35e1110540.jpg_640x640.jpg",
     "rating":4.7,
     "sold":27000,
-    "category":"men's clothing"
+    "category":"men's clothing",
+    "isFavorite":false
   },
   {
     "id":13,
@@ -137,7 +150,8 @@
     "image":"https://ae04.alicdn.com/kf/Sf91cbaffa2404af08d01b35f6ce0568bx.jpg_640x640.jpg",
     "rating":4.9,
     "sold":7146,
-    "category":"jewelery"
+    "category":"jewelery",
+    "isFavorite":false
   },
   {
     "id":14,
@@ -147,7 +161,8 @@
     "image":"https://ae04.alicdn.com/kf/S0d3c89fa6bdc42a0a43f28ce22256035E.jpg_640x640.jpg",
     "rating":4.6,
     "sold":11197,
-    "category":"jewelery"
+    "category":"jewelery",
+    "isFavorite":false
   },
   {
     "id":15,
@@ -157,7 +172,8 @@
     "image":"https://ae04.alicdn.com/kf/He68442185b5d4f1cbef3c679ab94332aH.jpg_640x640.jpg",
     "rating":4.8,
     "sold":2098,
-    "category":"jewelery"
+    "category":"jewelery",
+    "isFavorite":false
   },
   {
     "id":16,
@@ -167,7 +183,8 @@
     "image":"https://ae04.alicdn.com/kf/Sb32a53d3c77d45efbb19380e0b8a1a46P.jpg_640x640.jpg",
     "rating":4.5,
     "sold":44477,
-    "category":"women's clothing"
+    "category":"women's clothing",
+    "isFavorite":false
   },
   {
     "id":17,
@@ -177,7 +194,8 @@
     "image":"https://ae04.alicdn.com/kf/S891cf9a54f3649bd803d051f21805688A.jpg_640x640.jpg",
     "rating":4.6,
     "sold":20757,
-    "category":"women's clothing"
+    "category":"women's clothing",
+    "isFavorite":false
   },
   {
     "id":18,
@@ -187,7 +205,8 @@
     "image":"https://ae04.alicdn.com/kf/Sec8e6825a24241d2bda69c60a707e9e7v.jpg_640x640.jpg",
     "rating":4.6,
     "sold":4305,
-    "category":"women's clothing"
+    "category":"women's clothing",
+    "isFavorite":false
   },
   {
     "id":19,
@@ -197,7 +216,8 @@
     "image":"https://ae04.alicdn.com/kf/Sc0a8ba569b144d728caceaf18bdce283d.jpg_640x640.jpg",
     "rating":4.6,
     "sold":3834,
-    "category":"electronics"
+    "category":"electronics",
+    "isFavorite":false
   },
   {
     "id":20,
@@ -207,7 +227,8 @@
     "image":"https://ae04.alicdn.com/kf/A6894cf76744d46da9167e7f399d43364q.png_640x640.jpg",
     "rating":4.9,
     "sold":19,
-    "category":"electronics"
+    "category":"electronics",
+    "isFavorite":false
   },
   {
     "id":21,
@@ -217,7 +238,8 @@
     "image":"https://ae04.alicdn.com/kf/Sb5f6afe9866643428c24dc5239fd4247G.jpg_640x640.jpg",
     "rating":4.2,
     "sold":966,
-    "category":"electronics"
+    "category":"electronics",
+    "isFavorite":false
   },
   {
     "id":22,
@@ -227,7 +249,8 @@
     "image":"https://ae04.alicdn.com/kf/S999da1a6d1bc4bbbaef8e6e6c2a39258m.jpg_640x640.jpg",
     "rating":4.6,
     "sold":101,
-    "category":"electronics"
+    "category":"electronics",
+    "isFavorite":false
   },
   {
     "id":23,
@@ -237,6 +260,7 @@
     "image":"https://ae04.alicdn.com/kf/Sde9997bed3e34b9ea5acd23c878ffd416.jpg_640x640.jpg",
     "rating":4.7,
     "sold":267,
-    "category":"electronics"
+    "category":"electronics",
+    "isFavorite":false
   }
 ]

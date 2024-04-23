@@ -4,12 +4,15 @@ import { Button, ConfigProvider, Rate } from "antd";
 import { ShoppingCartOutlined, DollarOutlined } from "@ant-design/icons";
 import { useContext } from "react";
 import { AuthContext } from "../AuthContext";
+import { GoHeartFill } from "react-icons/go";
 import "./CSS/AboutItem.css";
 
 export default function AboutItem({
   products,
   handleAddProduct,
   handleAddOrderSingle,
+  handleAddFavorites,
+  handleRemoveFavorites,
 }) {
   const { id } = useParams();
   const { isLoggedIn } = useContext(AuthContext);
@@ -40,6 +43,7 @@ export default function AboutItem({
         <div id="grid">
           <div>
             <img
+              className="image-item"
               src={products[id].image}
               alt={products[id].title}
               width="250"
@@ -58,6 +62,27 @@ export default function AboutItem({
           </div>
           <div className="third-grid">
             <ul>
+              <li>
+                {products[id].isFavorite ? (
+                  <span>
+                    <button
+                      onClick={() => handleRemoveFavorites(products[id])}
+                      className="button-favorites-red"
+                    >
+                      <GoHeartFill size={30} />
+                    </button>
+                  </span>
+                ) : (
+                  <span>
+                    <button
+                      onClick={() => handleAddFavorites(products[id])}
+                      className="button-favorites"
+                    >
+                      <GoHeartFill size={30} />
+                    </button>
+                  </span>
+                )}
+              </li>
               <li>
                 <Button
                   onClick={() => handleAddProduct(products[id])}

@@ -10,11 +10,12 @@ import { Link } from "react-router-dom";
 import { Button, ConfigProvider, Input } from "antd";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthContext";
+import { FaHeart } from "react-icons/fa6";
 
 export default function Header(props) {
   const { setSearch, cartItems } = props;
-  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
-  console.log(cartItems);
+  const { isLoggedIn, setIsLoggedIn, username } = useContext(AuthContext);
+
   return (
     <header>
       <ConfigProvider
@@ -36,18 +37,28 @@ export default function Header(props) {
           <span className="logo">
             <img src={logo} alt="aliexpress" />
           </span>
-          <Link to="/">
-            <Button type="primary" className="catalog-main">
-              <GiOpenBook />
-              <p className="catalog-text">Каталог</p>
-            </Button>
-          </Link>
+          <span>
+            <Link to="/favorites">
+              <Button type="primary" className="button-favorites">
+                <FaHeart size={30} color="white" />
+              </Button>
+            </Link>
+          </span>
+          <span>
+            <Link to="/">
+              <Button type="primary" className="catalog-main">
+                <GiOpenBook />
+                <p className="catalog-text">Каталог</p>
+              </Button>
+            </Link>
+          </span>
           <span className="finder-main">
             <Input
               className="finder-input"
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Поиск..."
             ></Input>
+            <span className="favorites"></span>
           </span>
           <ul className="nav">
             <li>
@@ -101,8 +112,12 @@ export default function Header(props) {
             </li>
           </ul>
         </div>
-        <div className="presentation"></div>
       </ConfigProvider>
+      {isLoggedIn ? (
+        <div className="login-user">Вы вошли как: {username}</div>
+      ) : (
+        <div></div>
+      )}
     </header>
   );
 }

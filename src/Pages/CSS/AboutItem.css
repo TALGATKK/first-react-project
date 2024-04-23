@@ -20,3 +20,61 @@ h1 {
 .third-grid ul li {
   margin: 20px;
 }
+button,
+button:active,
+button:focus {
+  border: none;
+  cursor: pointer;
+}
+
+.third-grid .button-favorites {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  transition: transform 0.2s ease;
+  margin-left: 40px;
+}
+.third-grid .button-favorites:hover {
+  transform: scale(1.2);
+  color: red;
+}
+.third-grid .button-favorites:active {
+  transform: scale(0.96);
+}
+.third-grid .button-favorites-red {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  transition: transform 0.2s ease;
+  margin-left: 40px;
+  color: red;
+}
+.third-grid .button-favorites-red:hover {
+  transform: scale(1.2);
+  color: red;
+}
+.third-grid .button-favorites-red:active {
+  transform: scale(0.96);
+}
+@media (max-width: 622px) {
+  .image-item {
+    width: 100px;
+    height: 150px;
+  }
+  #grid {
+    display: grid;
+    height: 80px;
+    grid-template-columns: repeat(3);
+    grid-template-rows: 80px;
+    column-gap: 20px;
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 450px) {
+  * {
+    min-width: 426px;
+    width: 426px;
+    flex: none;
+  }
+}
