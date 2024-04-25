@@ -22,7 +22,7 @@ export default function AboutItem({
       : alert("Для заказа товара необходимо авторизоваться!");
   };
   return (
-    <div>
+    <div className="wrapper">
       <ConfigProvider
         theme={{
           components: {
@@ -50,7 +50,7 @@ export default function AboutItem({
               height="300"
             />
           </div>
-          <div>
+          <div className="details">
             <ul>
               <li>Описание: {products[id].description}</li>
               <li>
@@ -102,7 +102,7 @@ export default function AboutItem({
                   icon={<DollarOutlined />}
                   size="default"
                 >
-                  Купить
+                  Купить сразу
                 </Button>
               </li>
             </ul>

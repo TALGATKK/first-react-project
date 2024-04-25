@@ -1,4 +1,3 @@
-import React from "react";
 import "./CSS/Order.css";
 
 export function Order({ order }) {

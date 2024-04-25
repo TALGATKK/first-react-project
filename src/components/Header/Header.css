@@ -179,9 +179,8 @@ header .login-user {
     left: 150px;
   }
   header ul.nav {
-    margin-left: 8px;
     position: absolute;
-    margin-left: 165px;
+    margin-left: 235px;
     top: 16px;
   }
 }
@@ -191,7 +190,7 @@ header .login-user {
     height: 100px;
   }
   header .catalog-main {
-    margin-left: 10px;
+    margin-left: 0px;
   }
 
   header .button-login {
@@ -203,12 +202,12 @@ header .login-user {
 
   header ul.nav {
     position: absolute;
-    margin-left: 165px;
+    margin-left: 225px;
     top: 16px;
   }
   header .finder-main .finder-input {
     height: 30px;
-    width: 250px;
+    width: 350px;
     position: absolute;
     margin-top: 60px;
     left: 100px;
@@ -217,24 +216,27 @@ header .login-user {
     margin-left: 8px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 488px) {
   header {
-    min-width: 426px;
-    width: 426px;
+    min-width: 340px;
+    width: 340px;
     flex: none;
   }
   header .button-favorites {
-    margin-left: 15px;
+    margin-left: 45px;
     margin-top: 6px;
     right: 70px;
     position: absolute;
+  }
+  header .catalog-main {
+    margin-left: 70px;
   }
   header .logo {
     position: absolute;
   }
   header ul.nav {
     position: absolute;
-    margin-left: 60px;
+    margin-left: 120px;
     top: 16px;
     min-width: 250px;
   }
@@ -248,4 +250,7 @@ header .login-user {
 
     left: 150px;
   }
+}
+
+@media (max-width: 390px) {
 }

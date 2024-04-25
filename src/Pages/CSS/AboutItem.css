@@ -1,6 +1,9 @@
 h1 {
   text-align: center;
 }
+.wrapper {
+  min-width: 426px;
+}
 #grid {
   display: grid;
   height: 100px;
@@ -57,24 +60,50 @@ button:focus {
   transform: scale(0.96);
 }
 @media (max-width: 622px) {
+  .wrapper {
+  }
   .image-item {
     width: 100px;
     height: 150px;
   }
+
+  img {
+    margin-left: 15px;
+  }
+  h1 {
+    font-size: 3ch;
+  }
   #grid {
-    display: grid;
-    height: 80px;
-    grid-template-columns: repeat(3);
-    grid-template-rows: 80px;
-    column-gap: 20px;
-    min-height: 500px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
-@media (max-width: 450px) {
-  * {
-    min-width: 426px;
-    width: 426px;
-    flex: none;
+@media (max-width: 488px) {
+  h1 {
+    font-size: 2ch;
+  }
+  .details {
+    font-size: small;
+  }
+  .wrapper {
+    min-width: 340px;
+  }
+  #grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 390px) {
+  h1 {
+    font-size: 3ch;
+  }
+  img {
+    margin-left: 15px;
+  }
+  #grid {
+    display: flex;
+    flex-direction: column;
   }
 }
