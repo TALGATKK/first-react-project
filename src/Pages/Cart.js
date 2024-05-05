@@ -19,6 +19,7 @@ export function Cart({
   return (
     <div className="cart-items">
       <div className="cart-items-header">Корзина:</div>
+      {console.log(cartItems.length)}
       {cartItems.length === 0 && (
         <div className="cart-items-empty">Пока нет товаров в корзине</div>
       )}
@@ -49,7 +50,10 @@ export function Cart({
           .reduce((total, value) => total + value, 0)}{" "}
         $
       </p>
-      <button onClick={handleClearCart}> Очистить корзину</button>
+      <button onClick={handleClearCart} className="cart-items-clear-button">
+        {" "}
+        <p className="text-white">Очистить корзину</p>
+      </button>
 
       <button onClick={OrderButton} className="cart-items-pay-button">
         Заказать

@@ -18,12 +18,12 @@ body {
   margin-top: 16px;
   min-height: 850px;
 }
-/* @media (max-width: 426px) {
+@media (max-width: 430px) {
   body {
-    min-width: 426px;
+    min-width: 390px;
   }
 
   .wrapper {
-    min-width: 426px;
+    min-width: 390px;
   }
-} */
+}

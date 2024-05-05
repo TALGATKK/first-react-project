@@ -32,3 +32,24 @@
   font-weight: 500;
   cursor: pointer;
 }
+@media (max-width: 626px) {
+  .loginsignup {
+    margin-left: 35px;
+    width: 500px;
+    height: 600px;
+  }
+}
+@media (max-width: 574px) {
+  .loginsignup {
+    margin-left: 75px;
+    width: 400px;
+    height: 600px;
+  }
+}
+@media (max-width: 488px) {
+  .loginsignup {
+    margin-left: 35px;
+    width: 320px;
+    height: 600px;
+  }
+}

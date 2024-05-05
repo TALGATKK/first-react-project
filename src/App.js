@@ -68,9 +68,10 @@ export default function App() {
   };
 
   const handleRemoveProduct = (product) => {
+    console.log(cartItems.length);
     const ProductExist = cartItems.find((item) => item.id === product.id);
     if (ProductExist.quantity === 1) {
-      setCartItems();
+      setCartItems(cartItems.filter((item) => item.id !== product.id));
     } else {
       setCartItems(
         cartItems.map((item) =>
@@ -96,7 +97,7 @@ export default function App() {
   };
 
   return (
-    <div class="wrapper">
+    <div className="wrapper">
       <AuthContextProvider>
         <Header setSearch={setSearch} cartItems={cartItems} />
         <Routes>

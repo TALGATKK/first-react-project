@@ -1,6 +1,7 @@
 .order-items {
   padding-top: 50px;
   padding-left: 30px;
+  margin-left: 35px;
 }
 .order-items p {
   color: green;
@@ -11,4 +12,10 @@
 }
 .order-items .order-table th {
   padding: 10px;
+}
+@media (max-width: 488px) {
+  .order-items {
+    font-size: 60%;
+    margin-left: 35px;
+  }
 }

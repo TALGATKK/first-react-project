@@ -63,10 +63,15 @@ button:focus {
   .wrapper {
   }
   .image-item {
-    width: 100px;
+    width: 150px;
     height: 150px;
   }
-
+  .details {
+    margin-left: 25px;
+  }
+  .details ul {
+    list-style: none;
+  }
   img {
     margin-left: 15px;
   }

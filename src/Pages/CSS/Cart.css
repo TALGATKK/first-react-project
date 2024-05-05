@@ -32,7 +32,36 @@
   color: green;
   padding-top: 50px;
 }
+.cart-items-clear-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fe2722;
+}
+.cart-items-clear-button .text-white {
+  color: white;
+}
 .cart-items-pay-button {
   padding: 10px;
   margin-left: 50%;
+}
+
+@media (max-width: 488px) {
+  .cart-items {
+    padding-left: 35px;
+    margin-left: 10px;
+  }
+
+  .cart-items-list {
+    font-size: 60%;
+    font-weight: 500;
+  }
+  .cart-items-total {
+    font-size: 80%;
+    font-weight: 600;
+  }
+  .cart-items-pay-button {
+    right: 20px;
+    margin-right: 20px;
+    margin-left: 100px;
+  }
 }

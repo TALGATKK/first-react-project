@@ -11,9 +11,7 @@ export function Item(props) {
     handleAddProduct,
     handleAddFavorites,
     handleRemoveFavorites,
-    isFavorite,
   } = props;
-  console.log(isFavorite);
   return (
     <div className="item">
       <Link key={id} to={`/${id}`}>

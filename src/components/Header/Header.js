@@ -14,7 +14,7 @@ import { FaHeart } from "react-icons/fa6";
 
 export default function Header(props) {
   const { setSearch, cartItems } = props;
-  const { isLoggedIn, setIsLoggedIn, username } = useContext(AuthContext);
+  const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
 
   return (
     <header>
@@ -113,11 +113,11 @@ export default function Header(props) {
           </ul>
         </div>
       </ConfigProvider>
-      {isLoggedIn ? (
+      {/* {isLoggedIn ? (
         <div className="login-user">Вы вошли как: {username}</div>
       ) : (
         <div></div>
-      )}
+      )} */}
     </header>
   );
 }

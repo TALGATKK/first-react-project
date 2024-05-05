@@ -14,12 +14,35 @@ export default function AuthContextProvider({ children }) {
   const [user, setUser] = useState({ username: "", password: "" });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
+  async function getUsers() {
+    try {
+      const response = await fetch(
+        "https://mocki.io/v1/a9423ca3-cf7c-4d18-bba2-a3329a7ea6c2"
+      );
+      const usersJson = await response.json();
+      setUser(usersJson);
+      console.log(user);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  getUsers();
+
   const login = (userData) => {
-    if (userData.username === "admin" && userData.password === "123") {
-      setIsLoggedIn(true);
-      setUser(userData);
-      navigate("/");
-    } else {
+    var isUser = false;
+    for (let i = 0; i < user.length; i++) {
+      if (
+        userData.username === user[i].username &&
+        userData.password === user[i].password
+      ) {
+        setIsLoggedIn(true);
+        isUser = true;
+        navigate("/");
+      }
+    }
+
+    if (isUser === false) {
       alert("Некорректные учетные данные!!!");
     }
   };
