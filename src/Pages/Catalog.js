@@ -8,13 +8,14 @@ export function Catalog({
   handleAddFavorites,
   search,
   sort,
+  setSort,
   setFavorites,
   isFavorite,
   handleRemoveFavorites,
 }) {
   return (
     <div>
-      <CatalogFilter />
+      <CatalogFilter setSort={setSort} />
       <ProductList
         list={productsList}
         handleAddProduct={handleAddProduct}
